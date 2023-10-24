@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Frontend</title>
+</head>
+
+<body>
+    <h1>Frontend</h1>
+    <p id="message">Message from the backend will appear here.</p>
+    <script>
+        // Fetch data from the backend
+        fetch('/api/message')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('message').textContent = data.message;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    </script>
+</body>
+</html>
+
+
+
+<!-- We have a simple HTML page with a <p> element that will display the message from the backend.
+We use JavaScript to make an HTTP request (GET) to the backend route /api/message.
+When the request is successful, we update the content of the <p> element with the received message.
+How it Works:
+
+Start the backend server: Run the backend code with Node.js, which starts the server on port 3000.
+
+Access the frontend: Open the index.html file in your web browser. The frontend will make an API request to the backend.
+
+The backend responds to the request with a JSON object containing a message.
+
+The frontend displays the message from the backend on the HTML page.
+
+This is a basic example of how to connect a Node.js backend and a frontend. In a real-world application, you would handle more complex data and 
+possibly use frameworks like React, Angular, or Vue.js on the frontend for a more structured approach. -->
