@@ -1,6 +1,2 @@
 Test
-
-
-
-
-Kbhkashsdakshdlakhj
+I made a message on 'main.js' 
